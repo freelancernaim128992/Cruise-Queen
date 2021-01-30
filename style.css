@@ -85,8 +85,8 @@ nav ul li a:hover, a.active{
     border-radius: 5px;
     border: none;
     background: #F3F5FF;
-    border-radius: 4px;
     margin: 10px 0;
+    font-weight: 700;
 }
 .f-class{
     display: flex;
@@ -98,7 +98,6 @@ nav ul li a:hover, a.active{
 }
 .plus-minus-btn{
     margin: 16px 5px 0px 0px;
-    word-spacing: 30px;
 }
 .plus-minus-btn button{
     color: white;
@@ -108,6 +107,7 @@ nav ul li a:hover, a.active{
     background: #e33741;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 10px;
 }
 .booking-form .inputs{
     display: grid;
