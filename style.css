@@ -7,11 +7,15 @@
 }
 body{
     font-family: 'Roboto', sans-serif;
+    
+}
+header{
     background:url("images/ship.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
+    padding-bottom: 207px;
 }
 nav{
     height: 50px;
@@ -123,8 +127,31 @@ nav ul li a:hover, a.active{
     color: #fff;
     font-weight: 500;
     background-color:  #E33741;
+    cursor: pointer;
 }
 .amount{
     display: flex;
     justify-content: space-between;
+}
+.complete-booking{
+    display: none;
+}
+.complete-booking-area {
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
+    background: #f7f7f7;
+}
+
+.complete-booking-area h1 {
+    padding-bottom: 15px;
+    color: green;
+}
+
+.complete-booking-area p {
+    width: 430px;
+    line-height: 30px;
+    color: dimgray;
 }

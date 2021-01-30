@@ -10,7 +10,13 @@ function ticketCalculation(increase, id) {
         increaseValue = increaseValue - 1;
     }
     getInputValue.value = increaseValue;
-    calculateTotal()
+    if (id == 'first-class-ticket-count') {
+        document.getElementById('booking-ticket-count').innerText = increaseValue + ' First Class';
+    }
+    if (id == 'economy-ticket-count') {
+        document.getElementById('booking-ticket-count').innerText = increaseValue + ' Economy';
+    }
+    calculateTotal();
 }
 
 
@@ -29,6 +35,7 @@ function calculateTotal() {
     const total = document.getElementById('total-money');
     const totalAmount = totalSubMoney + taxAmount;
     total.innerText = totalAmount;
+    document.getElementById('ticket-price').innerText = totalAmount;
 }
 
 
@@ -48,7 +55,7 @@ document.getElementById('first-class-plus-btn').addEventListener('click', functi
 
 // First Class Minus Button Event Listener
 document.getElementById('first-class-minus-btn').addEventListener('click', function () {
-    ticketCalculation(false, 'first-class-ticket-count')
+    ticketCalculation(false, 'first-class-ticket-count');
 })
 
 
@@ -62,4 +69,12 @@ document.getElementById('economy-plus-btn').addEventListener('click', function (
 document.getElementById('economy-minus-btn').addEventListener('click', function () {
     ticketCalculation(false, 'economy-ticket-count');
 })
+
+
+// Submit Button Event Listener
+document.getElementById('ticket-submit').addEventListener('click', function () {
+    document.getElementById('header-area').style.display = 'none';
+    document.getElementById('complete-booking').style.display = 'block';
+})
+
 
